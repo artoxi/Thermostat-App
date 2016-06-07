@@ -7,17 +7,19 @@ function changeTemp(sliderID, textbox) {
 function minTemp() {
     var t = document.getElementById("slider").value;
     if (t > 10) {
-        t=t-0.5;   
+        t=t-0.1;
+        t=Math.round(t*10)/10;
         document.getElementById("slider").value=t;
-        document.getElementById("cTemp").innerHTML=t+" C&deg;";           
-    } 
+        document.getElementById("cTemp").innerHTML=t+" C&deg;";
+    }
 }
 
 function plusTemp() {
     var t = document.getElementById("slider").value;
     if (t < 30) {
-        t=t-(-0.5);   
+        t=t-(-0.1);
+        t=Math.round(t*10)/10;
         document.getElementById("slider").value=t;
-        document.getElementById("cTemp").innerHTML=t+" C&deg;";           
-    } 
+        document.getElementById("cTemp").innerHTML=t+" C&deg;";
+    }
 }
