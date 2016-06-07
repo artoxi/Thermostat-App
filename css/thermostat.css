@@ -47,3 +47,14 @@ input[type='range'] {
 	font-size:18pt;
 	font-weight:bold;
 }
+
+ #circle {
+      width: 150px;
+      height: 150px;
+      -webkit-border-radius: 75px;
+      -moz-border-radius: 75px;
+      border-radius: 75px;
+      background: blue;
+      margin: left;
+      margin-left: 10px;
+    }
