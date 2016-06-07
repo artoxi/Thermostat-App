@@ -47,6 +47,6 @@ function display() {
         var b = sessionStorage.getItem(a);
         /*add sorting here*/
         rightbox.innerHTML += "<img src='images/sun.png' width='50px' /> "+a+" <img src='images/moon.png' width='50px'  /> "+b+
-		"&nbsp;<input type='button' style='font-size:18px;margin-right:20px;font-weight:bold' value='Remove' onclick=\"remove('"+a+"');\" /><br />";
+		"&nbsp;<input type='button' style='font-size:18px;margin-right:20px;font-weight:bold' value='Remove' onclick=remove(); /><br />";
     }
 }
