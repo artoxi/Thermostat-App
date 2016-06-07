@@ -10,7 +10,7 @@ function save(){
     var one = document.getElementById('one').value;
     var two = document.getElementById('two').value;
     /*add various types of checks here*/
-    if (one != "" && two != "" && sessionStorage.length < 5 &&A) {
+    if (one != "" && two != "" && sessionStorage.length < 5) {
         sessionStorage.setItem(one,two);
         display();
         document.getElementById('one').value="";
