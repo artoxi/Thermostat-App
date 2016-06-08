@@ -49,11 +49,11 @@ input[type='range'] {
 }
 
  #circle {
-      width: 150px;
-      height: 150px;
-      -webkit-border-radius: 75px;
-      -moz-border-radius: 75px;
-      border-radius: 75px;
+      width: 200px;
+      height: 200px;
+      -webkit-border-radius: 100px;
+      -moz-border-radius: 100px;
+      border-radius: 100px;
       background: #FF4433;
       margin: left;
       margin-left: 10px;
