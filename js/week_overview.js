@@ -46,7 +46,7 @@ function display() {
         var a = sessionStorage.key(x);
         var b = sessionStorage.getItem(a);
         /*add sorting here*/
-        rightbox.innerHTML += "<img src='images/sun.png' width='50px' /> "+a+" <img src='images/moon.png' width='50px' onclick=\"remove();\" /> "+b+
-		"&nbsp;<input type='button' style='font-size:18px;margin-right:20px;font-weight:bold' value='Remove' onclick=\"remove('"+a+"');\" /><br />";
+        rightbox.innerHTML += "<img src='images/sun.png' width='50px' onclick=\"remove();\"/> "+a+" <img src='images/moon.png' width='50px' onclick=\"remove();\" /> "+b+
+		"&nbsp;<input type='button' style='font-size:18px;margin-right:20px;font-weight:bold' value='Remove' onclick=\"remove('"+a+"'); \" /><br />";
     }
 }
