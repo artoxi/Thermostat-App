@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Thermostat</title>
 	<script src="js/jquery-2.1.0.min.js"></script>
 	<script src="js/week_overview.js"></script>
@@ -11,7 +12,7 @@
   <body>
 	<div style="padding:5px">
 
-		<div class='time' style='float:right'>
+		<div class='time' style='float:center'>
 			<script type="text/javascript">
 				<!--
 				var currentTime = new Date()
@@ -39,10 +40,10 @@
 			<form>
 				<span style='width:150px;display:inline-block;'>Day switch:</span>
 				<input type='time' id="one" style='font-size:18px;font-weight:bold'><br/>
-				<span style='width:150px;display:inline-block;'>Night switch:</span>
+				<span style='width:150px;display:inline-block; margin-top: 5%'>Night switch:</span>
 				<input type='time'  id="two" style='font-size:18px;font-weight:bold'><br/>
-				<input type="submit" style='font-size:18px;margin-right:20px;font-weight:bold'  id="save_button" value="Add" >
-				<input type='button' style='width:80px;font-size:18px;margin-right:20px;font-weight:bold' value="Remove all" onClick="removeAll();" />
+				<input type="submit" style='margin-top: 5%;font-size:18px;margin-right:20px;font-weight:bold'  id="save_button" value="Add" >
+				<input type='button' style='margin-top: 5%;width:115px;font-size:18px;margin-right:20px;font-weight:bold' value="Remove All" onClick="removeAll();" />
 			</form>
 
 		</div>
