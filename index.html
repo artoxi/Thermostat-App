@@ -10,7 +10,8 @@
   </head>
   <body >
 	<div class="maincontainer">
-		<div class='time' style='float:right'>
+	<a href="settings.html"><div style="float: right"><img src='images/settings.png' width='40px' /></div></a>
+		<div class='time' style='float:left'>
 				<script type="text/javascript">
 					<!--
 					var currentTime = new Date()
@@ -22,24 +23,16 @@
 	        document.write(hours+":"+minutes);
 	      }
 					//-->
-
-
-
-					$('input[type="range"]').on('mouseup', function() {
-						  this.blur();
-						}).on('mousedown input', function() {
-						  styl.inject('input[type=range]:focus::-webkit-slider-thumb:after, input[type=range]:focus::-ms-thumb:after, input[type=range]:focus::-moz-range-thumb:after', {content: "'"+this.value+"'"}).apply();
-						});
 				</script>
 			</div>
+			
 
-	    <h2>Current Temperature</h2>
-
-		<div id='arrowup' class="siem" style='margin-left: 0px'>
+	    <div id='arrowup' class="siem" style='margin-left: 0px'>
 			<div class="icon up"  onClick="plusTemp()"></div>
 		</div>
 		<div id='currentTemp' class="homeaux">
-				<div id="cTemp">21 C&deg;</div>
+				<div style="width = 100%;" ><h2>Temperature</h2>
+				<div style="width = 100%;" id="cTemp">21 C&deg;</div></div>
 		</div>	
 		<div id='arrowdown' class="siem" style='margin-left: 0px'>
 			<div class="icon down" onClick="minTemp()"></div>
