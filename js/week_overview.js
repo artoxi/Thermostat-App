@@ -10,18 +10,20 @@ function save(){
     var one = document.getElementById('one').value;
     var two = document.getElementById('two').value;
     /*add various types of checks here*/
-    if (one != "" && two != "" && sessionStorage.length < 5) {
+    if (one != "" && two != "" && sessionStorage.length < 5 && one < two) {
         sessionStorage.setItem(one,two);
         display();
         document.getElementById('one').value="";
         document.getElementById('two').value="";
     } else if (sessionStorage.length >= 5){
       alert("Maximum programs reached");
-      
-    } else {
+    } else if (one => two) {
+      alert("This is not a valid time period")
+    }else {
       alert("Please add a valid time")
     }
 }
+
 
 function removeItem(item){
     sessionStorage.removeItem(item);
@@ -51,5 +53,3 @@ function display() {
 		"<input type='button' style='font-size:18px;margin-right:20px;font-weight:bold' value='Remove' onclick=\"removeItem('"+a+"'); \" /></div>";
     }
 }
-
-
