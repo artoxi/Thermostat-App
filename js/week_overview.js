@@ -20,7 +20,7 @@ function save(){
     } else if (one => two) {
       alert("This is not a valid time period")
     }else {
-      alert("Please add a valid time")
+      alert("Please enter a valid time")
     }
 }
 
