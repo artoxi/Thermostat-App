@@ -33,12 +33,16 @@ function save(){
         var oldOne = checkOne.replace(":", "");
         var oldTwo = checkTwo.replace(":", "");
         if(oldOne > newOne && oldTwo < newTwo){
+                removeItem('"+checkOne+"');
                 sessionStorage.setItem(newOne,newTwo);
         } else if(oldOne < newOne && oldTwo < newTwo){
+                removeItem('"+checkOne+"');
                 sessionStorage.setItem(oldOne,newTwo);
         } else if(oldOne > newOne && oldTwo < newTwo){
+                removeItem('"+checkOne+"');
                 sessionStorage.setItem(newOne,oldTwo);
         } else if(oldOne > newOne && oldTwo < newTwo){
+                removeItem('"+checkOne+"');
                 sessionStorage.setItem(oldOne, oldTwo);
         }
     }
