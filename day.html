@@ -2,10 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-s21cale=1, maximum-scale=1">
     <title>Thermostat</title>
 	<script src="js/jquery-2.1.0.min.js"></script>
 	<script src="js/week_overview.js"></script>
+	<script src="js/api.js"></script>
 	<link rel="stylesheet" href="css/thermostat.css">
 	<link rel="stylesheet" href="css/week_overview.css">
   </head>
@@ -25,6 +26,30 @@
       }
 				//-->
 			</script>
+			<script>
+/*
+$(document).ready(function() {
+
+	var day = window.location.hash;
+	var strippedDay = day.replace("#", "");
+
+
+					getStuff(strippedDay);
+
+
+				$("#save_button").click(function() {
+					
+					var dayTemp = $("#one").val();
+					var nightTemp = $("#two").val();
+					addPeriod(strippedDay, dayTemp, nightTemp);
+
+					getStuff(strippedDay);
+
+
+				});
+
+	});*/</script>
+	
 		</div>
 
 		<h2>
@@ -42,7 +67,7 @@
 				<input type='time' id="one" style='font-size:18px;font-weight:bold'><br/>
 				<span style='width:150px;display:inline-block; margin-top: 5%'>Night switch:</span>
 				<input type='time'  id="two" style='font-size:18px;font-weight:bold'><br/>
-				<input type="submit" style='margin-top: 5%;font-size:18px;margin-right:20px;font-weight:bold'  id="save_button" value="Add" >
+				<input type="submit" style='margin-top: 5%;font-size:18px;margin-right:20px;font-weight:bold'  onclick="save();" id="save_button" value="Add" >
 				<input type='button' style='margin-top: 5%;width:115px;font-size:18px;margin-right:20px;font-weight:bold' value="Remove All" onClick="removeAll();" />
 			</form>
 

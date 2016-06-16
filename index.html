@@ -5,8 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Thermostat</title>
     	<script src="js/jquery-2.1.0.min.js"></script>
-	<script src="js/cTemp.js"></script>
+    	<script src="js/api.js"></script>
+	<!--<script src="js/cTemp.js"></script>-->
 	<link rel="stylesheet" href="css/thermostat.css">
+
+<script>
+
+$(document).ready(function() {
+	
+	var newTemp;
+	var currentTemp;
+	var updateTemp;
+
+
+
+	$(".changetemp").click(function() {
+		var which = $(this).data("tag");
+
+		currentTemp = $("#cTemp>span").html();
+		currentTemp = parseFloat(currentTemp);
+		if (which == "up") {
+			currentTemp = Math.round((currentTemp*10)+1)/10;
+		} else {
+			currentTemp = Math.round((currentTemp*10)-1)/10;
+		}
+
+		put("targetTemperature", "target_temperature", currentTemp);
+		$("#slider").val(currentTemp);
+
+	});
+
+
+	setInterval(function() {
+		updateTemp = get("currentTemperature", "current_temperature")
+		$("#cTemp>span").html(updateTemp);
+		$("#slider").val(updateTemp);
+
+	}, 200);
+
+	$("#slider").change(function() {
+		currentTemp = $(this).val();
+		put("targetTemperature", "target_temperature", currentTemp);
+		$("#slider").val(currentTemp);
+	});
+
+
+});
+
+</script>
+
   </head>
   <body >
 	<div class="maincontainer">
@@ -28,19 +75,17 @@
 			
 
 	    <div id='arrowup' class="siem" style='margin-left: 0px'>
-			<div class="icon up"  onClick="plusTemp()"></div>
+			<div class="icon up changetemp" data-tag="up"></div>
 		</div>
 		<div id='currentTemp' class="homeaux">
 				<div style="width = 100%;" ><h2>Temperature</h2>
-				<div style="width = 100%;" id="cTemp">21 C&deg;</div></div>
+				<div style="width = 100%;" id="cTemp"><span>21</span> C&deg;</div></div>
 		</div>	
 		<div id='arrowdown' class="siem" style='margin-left: 0px'>
-			<div class="icon down" onClick="minTemp()"></div>
+			<div class="icon down changetemp" data-tag="down"></div>
 		</div>
 		<div style='margin-top:0px;margin-bottom:20px'>
-			<input id="slider" type="range" min="5" max="30"
-			value="21" step='0.1' required
-			onchange="changeTemp('slider', 'cTemp');"></div>
+			<input id="slider" type="range" min="5" max="30" value="21" step='0.1'></div>
 		<a href="week_overview.html">
 			<div id="week"><span>Week overview</span></div>
 		</a>

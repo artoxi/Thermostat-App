@@ -1,7 +1,7 @@
 function changeTemp(sliderID, textbox) {
     var x = document.getElementById(textbox);
     var y = document.getElementById(sliderID);
-    x.innerHTML = y.value+" C&deg;";
+    x.innerHTML = y.value;
 }
 
 function minTemp() {
@@ -10,7 +10,7 @@ function minTemp() {
         t=t-0.1;
         t=Math.round(t*10)/10;
         document.getElementById("slider").value=t;
-        document.getElementById("cTemp").innerHTML=t+" C&deg;";
+        document.getElementById("cTemp").innerHTML=t;
     }
 }
 
@@ -20,6 +20,6 @@ function plusTemp() {
         t=t-(-0.1);
         t=Math.round(t*10)/10;
         document.getElementById("slider").value=t;
-        document.getElementById("cTemp").innerHTML=t+" C&deg;";
+        document.getElementById("cTemp").innerHTML=t;
     }
 }
