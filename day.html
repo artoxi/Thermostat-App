@@ -13,6 +13,7 @@
   <body>
 	<div style="padding:5px">
 		<a href="settings.html"><div style="float: right"><img src='images/settings.png' width='40px' /></div></a>
+		<a href="index.html"><div style="float: right"><img src='images/home.png' width='40px' /></div></a>
 		<div class='time2' style='float:left'>
 			<script type="text/javascript">
 				<!--
@@ -24,32 +25,8 @@
       } else {
         document.write(hours+":"+minutes);
       }
-				//-->
-			</script>
-			<script>
-/*
-$(document).ready(function() {
-
-	var day = window.location.hash;
-	var strippedDay = day.replace("#", "");
-
-
-					getStuff(strippedDay);
-
-
-				$("#save_button").click(function() {
-					
-					var dayTemp = $("#one").val();
-					var nightTemp = $("#two").val();
-					addPeriod(strippedDay, dayTemp, nightTemp);
-
-					getStuff(strippedDay);
-
-
-				});
-
-	});*/</script>
-	
+		</script>
+				
 		</div>
 
 		<h2>
@@ -67,7 +44,7 @@ $(document).ready(function() {
 				<input type='time' id="one" style='font-size:18px;font-weight:bold'><br/>
 				<span style='width:150px;display:inline-block; margin-top: 5%'>Night switch:</span>
 				<input type='time'  id="two" style='font-size:18px;font-weight:bold'><br/>
-				<input type="submit" style='margin-top: 5%;font-size:18px;margin-right:20px;font-weight:bold'  onclick="save();" id="save_button" value="Add" >
+				<input type="submit" style='margin-top: 5%;font-size:18px;margin-right:20px;font-weight:bold'  id="save_button" value="Add" >
 				<input type='button' style='margin-top: 5%;width:115px;font-size:18px;margin-right:20px;font-weight:bold' value="Remove All" onClick="removeAll();" />
 			</form>
 

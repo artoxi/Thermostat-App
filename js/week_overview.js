@@ -9,7 +9,7 @@ function doFirst() {
 function save(){
     var one = document.getElementById('one').value;
     var two = document.getElementById('two').value;
-    /*add various types of checks here
+    //add various types of checks here
     if (one != "" && two != "" && sessionStorage.length < 5 && one < two) {
         sessionStorage.setItem(one,two);
         display();
@@ -18,20 +18,25 @@ function save(){
     } else if (sessionStorage.length >= 5){
       alert("Maximum programs reached");
     } else if (one => two) {
-      alert("This is not a valid time period")
-    }/*else {
-      alert("Please enter a valid time")
-    }*/
-
+      alert("This is not a valid time period");
+    } 
+    else {
+      alert("Please enter a valid time");
+    }
+    /*
     for(var i=0; i < 5; i++){
         var newOne = one.replace(":", "");
+        newOne = parseFloat(newOne);
         var newTwo = two.replace(":", "");
+        newTwo = parseFloat(newTwo);
         var checkOne = sessionStorage.key(i);
         var checkTwo = sessionStorage.getItem(checkOne);
         checkOne = toString(checkOne);
         checkTwo = toString(checkTwo);
         var oldOne = checkOne.replace(":", "");
+        checkOne = parseFloat(checkOne);
         var oldTwo = checkTwo.replace(":", "");
+        checkTwo = parseFloat(checkTwo  );
         if(oldOne > newOne && oldTwo < newTwo){
                 removeItem('"+checkOne+"');
                 sessionStorage.setItem(newOne,newTwo);
@@ -44,14 +49,14 @@ function save(){
         } else if(oldOne > newOne && oldTwo < newTwo){
                 removeItem('"+checkOne+"');
                 sessionStorage.setItem(oldOne, oldTwo);
-        }
-    }
-    if (one != "" && two != "" && sessionStorage.length < 5 && one < two) {
+        } else if (one != "" && two != "" && sessionStorage.length < 5 && one < two) {
         sessionStorage.setItem(one,two);
         display();
         document.getElementById('one').value="";
         document.getElementById('two').value="";
     }
+    }*/
+    
 }
 
 
