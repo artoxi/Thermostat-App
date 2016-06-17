@@ -71,7 +71,9 @@ background-color: black;
 .time3{
 color: white;
 float: left;
-font-size: 40px;
+font-size: 38px;
+padding:3px;
+padding-left:6px;
 }
 
 .siem {
