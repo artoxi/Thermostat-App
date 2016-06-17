@@ -12,7 +12,7 @@
 <script>
 
 $(document).ready(function() {
-	
+
 	var newTemp;
 	var currentTemp;
 	var updateTemp;
@@ -57,23 +57,26 @@ $(document).ready(function() {
   </head>
   <body >
 	<div class="maincontainer">
-	<a href="settings.html"><div style="float: right"><img src='images/settings.png' width='40px' /></div></a>
-	<a href="index.html"><div style="float: right"><img src='images/home.png' width='40px' /></div></a>
-		<div class='time' style='float:left'>
-				<script type="text/javascript">
-					<!--
-					var currentTime = new Date()
-					var hours = currentTime.getHours()
-					var minutes = currentTime.getMinutes()
-	        if (minutes < 10) {
-					document.write(hours+":0"+minutes);
-	      } else {
-	        document.write(hours+":"+minutes);
-	      }
-					//-->
-				</script>
-			</div>
-			
+  <div style="padding:5px">
+    <div class='time2' style='float:left'>
+      <div class='time3'>
+          <script type="text/javascript">
+            <!--
+            var currentTime = new Date()
+            var hours = currentTime.getHours()
+            var minutes = currentTime.getMinutes()
+            if (minutes < 10) {
+            document.write(hours+":0"+minutes);
+          } else {
+            document.write(hours+":"+minutes);
+          }
+            //-->
+          </script>
+        </div>
+        <a href="settings.html"><div style="float: right"><img src='images/settings.png' width='40px' /></div></a>
+        <a href="index.html"><div style="float: right"><img src='images/home.png' width='40px' /></div></a>
+      </div>
+
 
 	    <div id='arrowup' class="siem" style='margin-left: 0px'>
 			<div class="icon up changetemp" data-tag="up"></div>
@@ -81,7 +84,7 @@ $(document).ready(function() {
 		<div id='currentTemp' class="homeaux">
 				<div style="width = 100%;" ><h2>Temperature</h2>
 				<div style="width = 100%;" id="cTemp"><span>21</span> C&deg;</div></div>
-		</div>	
+		</div>
 		<div id='arrowdown' class="siem" style='margin-left: 0px'>
 			<div class="icon down changetemp" data-tag="down"></div>
 		</div>

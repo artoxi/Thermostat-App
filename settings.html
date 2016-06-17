@@ -10,28 +10,46 @@
 	<link rel="stylesheet" href="css/thermostat.css">
   </head>
   <body >
-  <a href="settings.html"><div style="float: right"><img src='images/settings.png' width='40px' /></div></a>
-  <a href="index.html"><div style="float: right"><img src='images/home.png' width='40px' /></div></a>
-  <div class='time2' style='float:left'>
-				<script type="text/javascript">
-					<!--
-					var currentTime = new Date()
-					var hours = currentTime.getHours()
-					var minutes = currentTime.getMinutes()
-	        if (minutes < 10) {
-					document.write(hours+":0"+minutes);
-	      } else {
-	        document.write(hours+":"+minutes);
-	      }
-					//-->
-				</script>
-			</div>
-			
+    <div style="padding:5px">
+      <div class='time2' style='float:left'>
+        <div class='time3'>
+    				<script type="text/javascript">
+    					<!--
+    					var currentTime = new Date()
+    					var hours = currentTime.getHours()
+    					var minutes = currentTime.getMinutes()
+    	        if (minutes < 10) {
+    					document.write(hours+":0"+minutes);
+    	      } else {
+    	        document.write(hours+":"+minutes);
+    	      }
+    					//-->
+    				</script>
+    			</div>
+          <a href="settings.html"><div style="float: right"><img src='images/settings.png' width='40px' /></div></a>
+      		<a href="index.html"><div style="float: right"><img src='images/home.png' width='40px' /></div></a>
+        </div>
+
 			<div id ='settingsContainer'>
-			
+
 	<div style="float:center"><h2> Settings </h2></div>
-	<div class="vacation"> <div id='vacation2'> Vacation mode</div>
+  <div class="dayTemp">
+    <div id='vacationTemp'>Day Temperature </div>
+    <div id='vacationTempIn'> <input type="number" name="temperature" min="5.0" max="30.0"> </div>
+  </div>
+  <div class="nightTemp">
+    <div id='vacationTemp'>Night Temperature </div>
+    <div id='vacationTempIn'> <input type="number" name="temperature" min="5.0" max="30.0"> </div>
+  </div>
+  <div class="nightTemp"> </div>
+	<div class="vacation">
+    <div id='vacation2'> Vacation mode</div>
 			<div id='sliderIn'><label class="switch"><input type="checkbox"> <div id='sliderIn' class="slider round"></label></div>
 			</div></div>
+  <div class="vacationTempSet">
+    <div id='vacationTemp'> Vacation Temperature </div>
+    <div id='vacationTempIn'><input type="number" name="temperature" min="5.0" max="30.0"> </div>
+    </div>
+  </div>
    </body>
 </html>
