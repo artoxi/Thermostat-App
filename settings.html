@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Thermostat</title>
     	<script src="js/jquery-2.1.0.min.js"></script>
+      <script src="js/settings.js"></script>
 	<script src="js/cTemp.js"></script>
 	<script type="$(document).on('click', '.toggle-button', function() {$(this).toggleClass('toggle-button-selected'); });"></script>
 	<link rel="stylesheet" href="css/thermostat.css">
@@ -44,7 +45,7 @@
   <div class="nightTemp"> </div>
 	<div class="vacation">
     <div id='vacation2'> Vacation mode</div>
-			<div id='sliderIn'><label class="switch"><input type="quantity" id='vacationCheckbox'> <div id='sliderIn' class="slider round"></label></div>
+			<div id='sliderIn'><label class="switch"><input type="checkbox" id='vacationCheckbox'> <div id='sliderIn' class="slider round"></label></div>
 			</div></div>
   <div class="vacationTempSet">
     <div id='vacationTemp'> Vacation Temperature </div>

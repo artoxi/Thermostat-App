@@ -237,8 +237,8 @@ input:checked + .slider:before {
 	padding: 3%;
 }
 
-#submitButton {
+.submitButton {
 	padding: 3%;
-	float:right;
+	float:middle;
 	display: inline-block;;
 }
