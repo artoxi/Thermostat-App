@@ -19,7 +19,7 @@ function submitProcess(){
     document.getElementById('dayTemperature').value="";
     put("dayTemperature", "day_temperature", dayTemp);
     alert("Day Temperature has been set");
-     
+
   }else{
     alert("Please make sure the Day and/or Night Temperature are valid.");
   }
@@ -28,11 +28,11 @@ function submitProcess(){
 function vacationMode(){
   var checkboxChecked = document.getElementById('vacationCheckbox').checked;
   if(checkboxChecked){
-    document.getElementById('vacationModeStatus').innerHTML = "On";
+    document.getElementById('vacationModeExplanation').innerHTML = "<h5>Vacation mode will keep Temperature constant untill switched off</h5>"
     put("weekProgramState", "week_program_state", "off");
     alert("Vacation mode is On");
   }else{
-    document.getElementById('vacationModeStatus').innerHTML = "Off";
+    document.getElementById('vacationModeExplanation').innerHTML = " "
     put("weekProgramState", "week_program_state", "on");
     alert("Vacation mode is Off");
   }
@@ -47,7 +47,7 @@ function updateTemperature(){
       if(curVacationMode == "off"){
       $("#vacationModeStatus").text("On");
       $('#vacationCheckbox').prop('checked', true);
-          
+
     }
     else{
      $("#vacationModeStatus").text("Off");
