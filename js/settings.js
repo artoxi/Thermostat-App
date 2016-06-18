@@ -42,13 +42,16 @@ function updateTemperature(){
       var curDayTemp = get("dayTemperature", "day_temperature");
       var curNightTemp = get("nightTemperature", "night_temperature");
       var curVacationMode = get("weekProgramState", "week_program_state");
-      document.getElementById('dayTemperatureStatus').value="curDayTemp";
-      document.getElementById('nightTemperatureStatus').value="curNightTemp";
-      /*if(curVacationMode == "Off"){
-      document.getElementById('vacationModeStatus').value="On";
+      $("#dayTemperatureStatus").text(curDayTemp);
+      $("#nightTemperatureStatus").text(curNightTemp);
+      if(curVacationMode == "off"){
+      $("#vacationModeStatus").text("On");
+      $('#vacationCheckbox').prop('checked', true);
           
     }
     else{
-      document.getElementById('vacationModeStatus').value="Off";
-    }*/
+     $("#vacationModeStatus").text("Off");
+     $('#vacationCheckbox').prop('checked', false);
+    }
   }
+//$('#vacationModeStatus').prop('checked', true);
