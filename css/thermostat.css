@@ -21,7 +21,7 @@ body, div, p {
 }
 
 a:link {
-  text-decoration : none;
+  text-decoration : none  ;
 }
 
 body {
@@ -52,8 +52,8 @@ input[type='range'] {
 	color:#ffffff;
 	-webkit-border-radius:10px;
 	background:#000000;
-	width:100%;
-	height:10%;
+	width:250px;
+	height:40px;
 	font-size:18pt;
 	font-weight:bold;
 }
@@ -63,19 +63,17 @@ input[type='range'] {
 
 }
 .time2{
-	background-color: black;
+background-color: black;
 	font-size: 20px;
 	width:100%;
-	height: 10%;
-	opacity: 0.8;
 }
 
 .time3{
-	color: white;
-	float: left;
-	font-size: 38px;
-	padding:3px;
-	padding-left:6px;
+color: white;
+float: left;
+font-size: 38px;
+padding:3px;
+padding-left:6px;
 }
 
 .siem {
@@ -87,33 +85,12 @@ input[type='range'] {
     text-align: center;
 }
 
-.siem > .icon {
+.siem > img {
 	display: table-cell;
 	vertical-align: middle;
 	text-align: center;
 	margin: 0 auto;
 	height: 100%;
-	width: 100%;
-}
-
-.icon.down {
-	background: url('../images/arrow_down.png');
-	background-size: 20%;
-	background-position: 50%;
-	background-repeat: no-repeat;
-}
-
-.icon.up {
-	background: url('../images/arrow_up.png');
-	background-size: 20%;
-	background-position: 50%;
-	background-repeat: no-repeat;
-}
-
-.icon {
-	width: 100%;
-	height: 100%;
-	opacity: 0.8;
 }
 
 .maincontainer {
@@ -141,6 +118,27 @@ input[type='range'] {
 }
 
 
+
+.icon.down {
+	background: url('../images/arrow_down.png');
+	background-size: 20%;
+	background-position: 50%;
+	background-repeat: no-repeat;
+}
+
+.icon.up {
+	background: url('../images/arrow_up.png');
+	background-size: 20%;
+	background-position: 50%;
+	background-repeat: no-repeat;
+}
+
+.icon {
+	width: 100%;
+	height: 100%;
+	opacity: 0.8;
+}
+
 #week, #weekday {
 	    height: 10%;
     width: 100%;
@@ -155,10 +153,6 @@ input[type='range'] {
 	vertical-align: middle;
 }
 
-#slider {
-  margin: 0;
-  padding: 0;
-}
 .switch {
   position: relative;
   display: inline-block;
@@ -239,6 +233,6 @@ input:checked + .slider:before {
 
 #submitButton {
 	padding: 3%;
-	float:right;
+	float:rightk;
 	display: inline-block;;
 }

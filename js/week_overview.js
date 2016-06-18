@@ -69,7 +69,7 @@ function removeItem(item){
 
 function removeAll(){
     sessionStorage.clear();
-     display();
+   display();
     document.getElementById('one').value="";
     document.getElementById('two').value="";
 }
@@ -83,7 +83,7 @@ function display() {
     for (var x=0;x<sessionStorage.length;x++) {
         var a = sessionStorage.key(x);
         var b = sessionStorage.getItem(a);
-        rightbox.innerHTML += "<div><img src='images/sun.png' width='50px' /> "+a+" <img src='images/moon.png' width='50px' /> "+b+
+        rightbox.innerHTML +=  rightbox.innerHTML += "<div><img src='images/sun.png' width='50px' /> "+a+" <img src='images/moon.png' width='50px' /> "+b+
         "<input type='button' style='font-size:18px;margin-right:20px;font-weight:bold' value='Remove' onclick=\"removeItem('"+a+"'); \" /></div>";
         }
 }
