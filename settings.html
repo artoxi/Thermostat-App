@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Thermostat</title>
     	<script src="js/jquery-2.1.0.min.js"></script>
+      <script src="js/settings.js"></script>
 	<script src="js/cTemp.js"></script>
 	<script type="$(document).on('click', '.toggle-button', function() {$(this).toggleClass('toggle-button-selected'); });"></script>
 	<link rel="stylesheet" href="css/thermostat.css">
@@ -30,30 +31,32 @@
       		<a href="index.html"><div style="float: right"><img src='images/home.png' width='40px' /></div></a>
         </div>
 
-			<div id ='settingsContainer'>
+<div id ='settingsContainer'>
 
 	<div style="float:center"><h2> Settings </h2></div>
   <div class="dayTemp">
     <div id='vacationTemp'>Day Temperature </div>
-    <div id='vacationTempIn'> <input type="number" name="quantity" min="5.0" max="30.0" step="0.1"> </div>
+    <div id='vacationTempIn'> <input type="number" id='dayTemperature' min="5.0" max="30.0" step="0.1"> </div>
   </div>
+
   <div class="nightTemp">
     <div id='vacationTemp'>Night Temperature </div>
-    <div id='vacationTempIn'> <input type="number" name="quantity" min="5.0" max="30.0" step="0.1"> </div>
+    <div id='vacationTempIn'> <input type="number" id='nightTemperature' min="5.0" max="30.0" step="0.1"> </div>
   </div>
-  <div class="nightTemp"> </div>
-	<div class="vacation">
+
+  <div class="vacation">
     <div id='vacation2'> Vacation mode</div>
-			<div id='sliderIn'><label class="switch"><input type="quantity"> <div id='sliderIn' class="slider round"></label></div>
+			<div id='sliderIn'><label class="switch"><input type="checkbox" id='vacationCheckbox'> <div id='sliderIn' class="slider round"></label></div>
 			</div></div>
+
   <div class="vacationTempSet">
     <div id='vacationTemp'> Vacation Temperature </div>
-    <div id='vacationTempIn'><input type="number" name="quantity" min="5.0" max="30.0" step="0.1"> </div>
+    <div id='vacationTempIn'><input type="number" id='vacationTemperature' min="5.0" max="30.0" step="0.1"> </div>
     </div>
+
   </div>
   <div class="submitButton">
-     <div id='vacationTemp'> Submit your changes </div>
-    <div id='vacationTempIn'><input type="submit"> </div>
+    <div id='vacationTempIn'><button onclick="submitProcess()">Submit your changes</button> </div>
   </div>
    </body>
 </html>
