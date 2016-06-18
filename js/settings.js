@@ -1,23 +1,28 @@
 function submitProcess(){
   var dayTemp = document.getElementById('dayTemperature').value;
   var nightTemp = document.getElementById('nightTemperature').value;
-  var vacationTemp = document.getElementById('vacationTemperature').value;
+  if(dayTemp >=5 && dayTemp <= 30 && nightTemp >= 5 && nightTemp <= 30){
+    document.getElementById('nightTemperatureStatus').innerHTML = nightTemp;
+    document.getElementById('dayTemperatureStatus').innerHTML = dayTemp;
+    alert("Day and Night Temperature have been set");
+  }else if(nightTemp >=5 && nightTemp <= 30){
+    document.getElementById('nightTemperatureStatus').innerHTML = nightTemp;
+    alert("Night Temperature has been set");
+  }else if(dayTemp >=5 && dayTemp <= 30){
+    document.getElementById('dayTemperatureStatus').innerHTML = dayTemp;
+    alert("Day Temperature has been set");
+  }else{
+    alert("Please make sure the Day and/or Night Temperature are valid.");
+  }
+}
+
+function vacationMode(){
   var checkboxChecked = document.getElementById('vacationCheckbox').checked;
-  if(dayTemp < 5 || dayTemp > 30 || dayTemp == null || dayTemp == " "){
-    alert("Please enter a day Temperature between 5 and 30 degrees");
+  if(checkboxChecked){
+    document.getElementById('vacationModeStatus').innerHTML = "On";
+    alert("Vacation mode is On");
+  }else{
+    document.getElementById('vacationModeStatus').innerHTML = "Off";
+    alert("Vacation mode is Off");
   }
-  else if(nightTemp < 5 || nightTemp >30 || nightTemp == null || nightTemp == " "){
-    alert("Please enter a night Temperature between 5 and 30 degrees");
-  }
-  else if(checkboxChecked){
-  if(vacationTemp < 5 || vacationTemp > 30 || vacationTemp == null || vacationTemp == " " ){
-    alert("Please enter a Vacation Temperature between 5 and 30 degrees")
-  }
-  else{
-    alert("Settings Sucesfully saved");
-  }
-}
-  else {
-  alert("Settings succesfully saved");
-}
 }
