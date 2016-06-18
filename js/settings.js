@@ -12,7 +12,7 @@ function submitProcess(){
   }else if(nightTemp >=5 && nightTemp <= 30){
     document.getElementById('nightTemperatureStatus').innerHTML = nightTemp;
     document.getElementById('nightTemperature').value="";
-    put("nightTemperature", "night_temperature", nightT);
+    put("nightTemperature", "night_temperature", nightTemp);
     alert("Night Temperature has been set");
   }else if(dayTemp >=5 && dayTemp <= 30){
     document.getElementById('dayTemperatureStatus').innerHTML = dayTemp;
@@ -37,3 +37,18 @@ function vacationMode(){
     alert("Vacation mode is Off");
   }
 }
+
+function updateTemperature(){
+      var curDayTemp = get("dayTemperature", "day_temperature");
+      var curNightTemp = get("nightTemperature", "night_temperature");
+      var curVacationMode = get("weekProgramState", "week_program_state");
+      document.getElementById('dayTemperatureStatus').value="curDayTemp";
+      document.getElementById('nightTemperatureStatus').value="curNightTemp";
+      /*if(curVacationMode == "Off"){
+      document.getElementById('vacationModeStatus').value="On";
+          
+    }
+    else{
+      document.getElementById('vacationModeStatus').value="Off";
+    }*/
+  }
