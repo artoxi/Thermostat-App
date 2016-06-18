@@ -230,3 +230,9 @@ input:checked + .slider:before {
 	display: inline-block;
 	padding: 3%;
 }
+
+#submitButton {
+	padding: 3%;
+	float:rightk;
+	display: inline-block;;
+}
