@@ -6,9 +6,11 @@
     <title>Thermostat</title>
     	<script src="js/jquery-2.1.0.min.js"></script>
       <script src="js/settings.js"></script>
-	<script src="js/cTemp.js"></script>
+	<!--<script src="js/cTemp.js"></script>-->
+	<script src="js/api.js"></script>
 	<script type="$(document).on('click', '.toggle-button', function() {$(this).toggleClass('toggle-button-selected'); });"></script>
 	<link rel="stylesheet" href="css/thermostat.css">
+	
   </head>
   <body >
     <div style="padding:5px">
@@ -34,6 +36,10 @@
 			<div id ='settingsContainer'>
 
 	<div style="float:center"><h2> Settings </h2></div>
+	<div>
+		<div> Current day temperature: <div id='cdayTemp'></div><span>21</span> C&deg;</div>
+		<div> Current night temperature: <div id='cnightTemp'></div><span>18</span> C&deg;</div>
+	</div>
   <div class="dayTemp">
     <div id='vacationTemp'>Day Temperature </div>
     <div id='vacationTempIn'> <input type="number" id='dayTemperature' min="5.0" max="30.0" step="0.1"> </div>
@@ -45,15 +51,15 @@
   <div class="nightTemp"> </div>
 	<div class="vacation">
     <div id='vacation2'> Vacation mode</div>
-			<div id='sliderIn'><label class="switch"><input type="checkbox" id='vacationCheckbox'> <div id='sliderIn' class="slider round"></label></div>
-			</div></div>
+	<div id='sliderIn'><label class="switch"><input type="checkbox" id='vacationCheckbox'> <div id='sliderIn' class="slider round"></label></div></div>			
+  </div>
   <div class="vacationTempSet">
     <div id='vacationTemp'> Vacation Temperature </div>
     <div id='vacationTempIn'><input type="number" id='vacationTemperature' min="5.0" max="30.0" step="0.1"> </div>
     </div>
   </div>
   <div class="submitButton">
-     <button onclick="submitProcess()">Submit your Changes </button>
+     <button>Submit your Changes </button>
   </div>
    </body>
 </html>
