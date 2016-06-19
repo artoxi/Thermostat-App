@@ -17,8 +17,6 @@ $(document).ready(function() {
 	var currentTemp;
 	var updateTemp;
 
-
-
 	$(".changetemp").click(function() {
 		var which = $(this).data("tag");
 
@@ -29,10 +27,8 @@ $(document).ready(function() {
 		} else {
 			currentTemp = Math.round((currentTemp*10)-1)/10;
 		}
-
 		put("targetTemperature", "target_temperature", currentTemp);
 		$("#slider").val(currentTemp);
-
 	});
 
 
@@ -40,15 +36,13 @@ $(document).ready(function() {
 		updateTemp = get("currentTemperature", "current_temperature")
 		$("#cTemp>span").html(updateTemp);
 		$("#slider").val(updateTemp);
-
-	}, 200);
+	}, 300);
 
 	$("#slider").change(function() {
 		currentTemp = $(this).val();
 		put("targetTemperature", "target_temperature", currentTemp);
 		$("#slider").val(currentTemp);
 	});
-
 
 });
 
@@ -73,17 +67,15 @@ $(document).ready(function() {
 
           </script>
         </div>
-        <a href="settings.html"><div style="float: right"><img id='icon2' src='images/settings.png' width='40px' /></div></a>
-        <a href="index.html"><div style="float: right"><img id='icon2' src='images/home.png' width='40px' /></div></a>
+        <a href="settings.html"><div style="float: right"><img id='icon2' src='images/settings.png' width='56px' height='56px' /></div></a>
+        <a href="index.html"><div style="float: right"><img id='icon2' src='images/home.png' width='56px' height='56px'/></div></a>
       </div>
-
-
 	    <div id='arrowup' class="siem" style='margin-left: 0px'>
 			<div class="icon up changetemp" data-tag="up"></div>
 		</div>
 		<div id='currentTemp' class="homeaux">
 				<div style="width = 100%;" ><h2>Temperature</h2>
-				<div style="width = 100%;" id="cTemp"><span>21</span> C&deg;</div></div>
+				<div style="width = 100%;" id="cTemp"><span></span> C&deg;</div></div>
 		</div>
 		<div id='arrowdown' class="siem" style='margin-left: 0px'>
 			<div class="icon down changetemp" data-tag="down"></div>

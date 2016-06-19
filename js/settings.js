@@ -5,23 +5,22 @@ function submitProcess(){
     document.getElementById('nightTemperatureStatus').innerHTML = nightTemp;
     document.getElementById('dayTemperatureStatus').innerHTML = dayTemp;
     document.getElementById('dayTemperature').value="";
-    put("dayTemperature", "day_temperature", dayTemp);
     document.getElementById('nightTemperature').value="";
-    put("nightTemperature", "night_temperature", nightT);
-    alert("Day and Night Temperature have been set");
+    put("dayTemperature", "day_temperature", dayTemp);    
+    put("nightTemperature", "night_temperature", nightTemp);
+    alert("Day Temperature has been set to "+dayTemp+"\xB0C. "+"Night Temperature has been set to "+nightTemp+"\xB0C");
   }else if(nightTemp >=5 && nightTemp <= 30){
     document.getElementById('nightTemperatureStatus').innerHTML = nightTemp;
     document.getElementById('nightTemperature').value="";
     put("nightTemperature", "night_temperature", nightTemp);
-    alert("Night Temperature has been set");
+    alert("Night Temperature has been set to "+nightTemp+"\xB0C");
   }else if(dayTemp >=5 && dayTemp <= 30){
     document.getElementById('dayTemperatureStatus').innerHTML = dayTemp;
     document.getElementById('dayTemperature').value="";
     put("dayTemperature", "day_temperature", dayTemp);
-    alert("Day Temperature has been set");
-
+    alert("Day Temperature has been set to "+dayTemp+"\xB0C");
   }else{
-    alert("Please make sure the Day and/or Night Temperature are valid.");
+    alert("Please make sure the Day and/or Night Temperature are valid. The Temperatures should be in the range 5-30.");
   }
 }
 
@@ -30,11 +29,11 @@ function vacationMode(){
   if(checkboxChecked){
     document.getElementById('vacationModeExplanation').innerHTML = "<h5>Vacation mode will keep Temperature constant untill switched off</h5>"
     put("weekProgramState", "week_program_state", "off");
-    alert("Vacation mode is On");
+    alert("Vacation mode has been turned on.");
   }else{
     document.getElementById('vacationModeExplanation').innerHTML = " "
     put("weekProgramState", "week_program_state", "on");
-    alert("Vacation mode is Off");
+    alert("Vacation mode has been turned off.");
   }
 }
 
@@ -47,6 +46,7 @@ function updateTemperature(){
       if(curVacationMode == "off"){
       $("#vacationModeStatus").text("On");
       $('#vacationCheckbox').prop('checked', true);
+      document.getElementById('vacationModeExplanation').innerHTML = "<h5>Vacation mode will keep Temperature constant untill switched off</h5>"
 
     }
     else{
