@@ -9,8 +9,15 @@
 	<script src="js/api.js"></script>
 	<link rel="stylesheet" href="css/thermostat.css">
 	<link rel="stylesheet" href="css/week_overview.css">
+	<script>
+		function dayOfTheWeek(){
+				 var url = window.location.href;
+				 url = url.split("#").pop();
+				 $("#whatDay").text(url);
+		}
+	</script>
   </head>
-  <body>
+  <body onload="dayOfTheWeek()">
 	<div style="padding:5px">
     <div class='time2' style='float:left'>
         <a href="week_overview.html"><div style="float: left"><img id='icon2' src='images/back_button.png' width='40px' /></div></a>
@@ -44,6 +51,7 @@
 
 		<div id="leftbox">
 			<form>
+				<span style='font-size: 30px; text-align: center;' id='whatDay'></span><br/>
 				<span style='width:150px;display:inline-block;'>Day switch:</span>
 				<input type='time' id="one" style='font-size:18px;font-weight:bold'><br/>
 				<span style='width:150px;display:inline-block; margin-top: 5%'>Night switch:</span>
